@@ -12,8 +12,8 @@ export default function Router() {
   return (
     <BrowserRouter>
       <Routes>
-        {routes.map(({ path, element }) => (
-          <Route path={path} element={element} />
+        {routes.map(({ path, element }, idx) => (
+          <Route path={path} element={element} key={idx} />
         ))}
       </Routes>
     </BrowserRouter>
