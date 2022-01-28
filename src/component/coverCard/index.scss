@@ -1,0 +1,71 @@
+.cover-card {
+  display: inline-flex;
+  flex-direction: column;
+  margin: 1rem;
+  z-index: 1;
+
+  p {
+    font-size: 12px;
+  }
+}
+
+.cover-card-img {
+  max-width: 200px;
+  min-width: 100px;
+  aspect-ratio: 1/1;
+  position: relative;
+
+  img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  .shadow {
+    transition: 300ms;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    filter: blur(14px) opacity(0.7);
+    z-index: -1;
+    background-size: cover;
+    border-radius: 8px;
+  }
+
+  .cover-card-play-button {
+    position: absolute;
+    transition: 300ms;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    color: #fff;
+    background: rgba(40, 40, 40, 0.1);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    cursor: pointer;
+    span {
+      position: relative;
+      font-size: 1.2rem;
+      left: 2px;
+      top: 1px;
+    }
+
+    &:active {
+      background: rgba(0, 0, 0, 0.1) !important;
+    }
+
+    &:hover {
+      background: rgba(200, 200, 200, 0.1);
+    }
+  }
+}

@@ -1,15 +1,27 @@
-import CoverCard from '../coverCard'
+import { ListItem, TopListItem, ITEM_TYPES } from '@/interfaces/playlist'
+import ListCoverCard from '../CoverCard'
 
 interface Props {
-  items: any
+  items: Array<ListItem>
+  type: ITEM_TYPES
 }
 
-export default function PlayList(props: Props) {
-  return (
-    <>
-      {props.items.map((item: object, idx: number) => (
-        <CoverCard item={item} key={idx} />
-      ))}
-    </>
-  )
+export default function PlayList({ items, type }: Props) {
+  let list: Array<JSX.Element> = []
+
+  function renderList() {
+    switch (type) {
+      case ITEM_TYPES.TOP:
+        list = items.map((item, key) => (
+          <ListCoverCard item={item as TopListItem} key={key} />
+        ))
+        break
+      default:
+        break
+    }
+
+    return <>{list}</>
+  }
+
+  return renderList()
 }

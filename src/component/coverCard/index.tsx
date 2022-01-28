@@ -1,20 +1,17 @@
-import './index.css'
+import { TopListItem } from '@/interfaces/playlist'
+import Cover from './cover'
+import './index.scss'
 
 interface Props {
-  item: any
-  type?: string
+  item: TopListItem
 }
 
-export default function CoverCard(props: Props) {
-  const { item } = props
-  console.log(item)
+export default function ListCoverCard({ item }: Props) {
   return (
-    item && (
-      <div className="cover-card">
-        <img className="cover" src={item.coverImgUrl} alt={item.coverImgUrl} />
-        <h4>{item.name}</h4>
-        <p>{item.updateFrequency}</p>
-      </div>
-    )
+    <div className="cover-card">
+      <Cover showPalyButton coverImgUrl={item.coverImgUrl} />
+      <h4>{item.name}</h4>
+      <p>{item.updateFrequency}</p>
+    </div>
   )
 }

@@ -1,13 +1,14 @@
 import { PlayList } from '@/component'
 import { getTopLists } from '@/api/playlist'
 import { useEffect, useState } from 'react'
+import { TopListItem, ITEM_TYPES } from '@/interfaces/playlist'
 
 export default function HomePage() {
-  const [toplists, setToplists] = useState([])
+  const [toplists, setToplists] = useState<Array<TopListItem>>([])
 
   useEffect(() => {
-    getTopLists().then(list => setToplists(list as any))
+    getTopLists().then(list => setToplists(list))
   }, [])
 
-  return <PlayList items={toplists} />
+  return <PlayList type={ITEM_TYPES.TOP} items={toplists} />
 }
