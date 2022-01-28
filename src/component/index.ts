@@ -1,3 +1,3 @@
-import PlayList from '@/component/Playlist'
+import PlayList from './Playlist/index'
 
 export { PlayList }
