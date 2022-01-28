@@ -1,5 +1,5 @@
 import { ListItem, TopListItem, ITEM_TYPES } from '@/interfaces/playlist'
-import ListCoverCard from '../CoverCard'
+import ListCoverCard from '../covercard'
 
 interface Props {
   items: Array<ListItem>

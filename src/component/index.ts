@@ -1,3 +1,3 @@
-import PlayList from './Playlist/index'
+import PlayList from './playlist'
 
 export { PlayList }
