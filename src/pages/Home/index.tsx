@@ -1,4 +1,4 @@
-import { PlayList } from '@/component'
+import { PlayList } from '@/component/index'
 import { getTopLists } from '@/api/playlist'
 import { useEffect, useState } from 'react'
 import { TopListItem, ITEM_TYPES } from '@/interfaces/playlist'
