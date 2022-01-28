@@ -1,4 +1,4 @@
-import { ListItem, TopListItem, ITEM_TYPES } from '@/interfaces/playlist'
+import { ListItem, TopListItem, ITEM_TYPES } from '@/interface/playlist'
 import ListCoverCard from '../covercard'
 
 interface Props {

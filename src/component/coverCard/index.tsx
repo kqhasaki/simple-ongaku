@@ -1,4 +1,4 @@
-import { TopListItem } from '@/interfaces/playlist'
+import { TopListItem } from '@/interface/playlist'
 import Cover from './cover'
 import './index.scss'
 
