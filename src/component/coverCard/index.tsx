@@ -1,5 +1,5 @@
 import { TopListItem } from '@/interface/playlist'
-import Cover from './cover'
+import Cover from './Cover'
 import './index.scss'
 
 interface Props {
