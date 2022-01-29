@@ -21,6 +21,7 @@ export default function PlayList({ items, type }: Props) {
     }
 
     return <>{list}</>
+
   }
 
   return renderList()
